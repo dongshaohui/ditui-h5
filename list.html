@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body >
+<div class="head"><span class="back" onClick="javascript:history.go(-1);">返回</span>公众号列表</div>
+<ul id="tab" >
+<li style="border-right:1px solid #eee;margin-left:-1px; color:#000">可关注</li>
+<li>已关注</li>
+</ul>
+<ul id="tab-t" >
+
+<li style="display:block">
+<span>
+<img src="images/1.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+<span>
+<img src="images/2.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+<span>
+<img src="images/3.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+<span>
+<img src="images/4.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+</li>
+<li>
+
+<span>
+<img src="images/5.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+<span>
+<img src="images/6.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+<span>
+<img src="images/3.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+<span>
+<img src="images/4.png">
+<h1>名称标题</h1>
+<p>介绍内容素雅小清新</p>
+</span>
+
+</li>
+</ul>
+<script>
+var tab1=document.getElementById("tab");
+var tab2=document.getElementById("tab-t");
+var oli1=tab1.getElementsByTagName("li");
+var oli2=tab2.getElementsByTagName("li");
+for(var i=0;i<oli1.length; i++){
+	oli1.item(i).index=i;
+	oli1.item(i).onclick=function(){
+		for(var i=0;i<oli1.length; i++){
+			oli1.item(i).style.color=""
+			oli2.item(i).style.display="none"
+		}
+		this.style.color="#000";
+		oli2.item(this.index).style.display="block"
+		}
+	}
+
+</script>
+</body>
+</html>
